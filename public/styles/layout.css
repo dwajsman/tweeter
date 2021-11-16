@@ -39,15 +39,20 @@ body {
    width: 100vw;
    background-color: #4056A1;
    /* font-family: 'Bungee', cursive; */
-   font-family: 'Times New Roman', Times, serif;
+   /* font-family: 'Times New Roman', Times, serif; */
    color: #fff;
-   padding: 1.5em;
+   padding-right: 1.5em;
+   padding-left: 1.5em;
    display: flex;
    justify-content: space-between;
+     align-items: center;
 
  }
  nav > div {
-
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
  }
 
