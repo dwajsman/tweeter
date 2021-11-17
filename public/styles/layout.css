@@ -41,7 +41,7 @@ body {
 
 main {
   width: 90%;
-  border: 6px solid teal;
+
   margin-top: 30px;
   /* padding: 40px; */
   display: flex;
@@ -58,45 +58,67 @@ main {
 }
 
 .new-tweet h2 {
-  color: violet;
+  color: #555249;
   width: 100%;
 
 }
 
 .new-tweet label {
-  color: dodgerblue;
-  position: fixed;
+  color: #555249;
+
 
 }
 
 form {
-  border: 1px solid aquamarine;
-  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+;
+  width: 100%;  
+  
 }
 
 #tweet-text {
-  border: 1px solid red;
-  background: gray;
+  /* border: 1px solid red; */
+  background: transparent;
+  border: none;
+  resize: none;
+  border-bottom: 4px solid #555249;
+  ;
   width: 100%;
+  position: relative;
+  
+
   /* position: fixed; */
 
 
 }
 
+form > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  margin-top: 20px;
+  font-family: 'Bungee', cursive;
+}
+
+
+
 div > button {
-  border: 4px solid red;
+
+  background-color: #4156A1;
+  color: #fff;
+  border: 0;
+
 }
 
 output {
-  color: maroon;
+  color: #555249;
+  flex-grow: 2;
+  width: 50%;
+  text-align: right;
 
 }
 
-
-
-
-
-
-
-
-}
