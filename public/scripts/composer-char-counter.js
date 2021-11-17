@@ -4,15 +4,15 @@ $(document).ready(function() {
     // console.log($(this).val().length);
     let textLenght = $(this).val().length;
     let remainingChar = 140 - textLenght;
-    
-    $('output').text(remainingChar);
+    let output = $(this).closest('form').find('.counter');
+    output.text(remainingChar);
 
 
     if (remainingChar <= 0) {
-      $('output').addClass('red');
+      output.addClass('red');
     }
     if (remainingChar > 0) {
-      $('output').removeClass('red');
+      output.removeClass('red');
     }
 
   });
