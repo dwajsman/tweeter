@@ -1,15 +1,13 @@
 $(document).ready(function() {
 
-  // $('textarea').click(function() {
-  //   console.log("clicky click");
-  //   alert("The paragraph was clicked.");
-  // });
-
   $('textarea').keyup(function() {
-    let textLenght = $('textarea').val().length;
-    // console.log(textLenght);
+    // console.log($(this).val().length);
+    let textLenght = $(this).val().length;
     let remainingChar = 140 - textLenght;
+    
     $('output').text(remainingChar);
+
+
     if (remainingChar <= 0) {
       $('output').addClass('red');
     }
