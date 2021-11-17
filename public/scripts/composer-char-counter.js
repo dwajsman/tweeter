@@ -17,7 +17,7 @@ $(document).ready(function() {
 
   });
 
-  console.log("running?");
+  // console.log("running?");
 
 });
 

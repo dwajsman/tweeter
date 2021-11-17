@@ -15,6 +15,7 @@ html {
  */
 
 body {
+  
   color: #545149;
 
   background-color: #f4f1ec;
@@ -30,11 +31,16 @@ body {
  */
 
 
- body {
+body {
 
-    font-family: 'Source Sans Pro',
+  font-family: 'Source Sans Pro',
     sans-serif;
-    background-color: pink;
-    display: flex;
-    align-items: center;
+  /* background-color: pink; */
+  background-color: #D89820;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+
+  display: flex;
+  align-items: center;
  }
+
+
