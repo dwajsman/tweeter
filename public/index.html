@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
     integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
@@ -28,8 +29,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
-</head>
+  <script type="text/javascript" src="/scripts/client.js">
+  </script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js">
+  </script>
+
+  </head>
 
 <body>
   <!-- Top nav bar (fixed) -->
@@ -55,6 +60,7 @@
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
+
       <form>
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
@@ -63,6 +69,8 @@
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
+
+
     </section>
   </main>
 </body>
