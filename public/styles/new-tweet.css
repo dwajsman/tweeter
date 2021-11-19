@@ -85,3 +85,9 @@ output {
 .red {
   color: red;
 }
+
+#alert {
+  color: red;
+  font-weight: bolder;
+  
+}

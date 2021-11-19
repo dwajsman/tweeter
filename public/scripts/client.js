@@ -41,30 +41,34 @@ $(function() {
     let text = data["content"]["text"];
     let time = timeago.format(data["created_at"]);
 
-    console.log(name, avatars, text);
+    //console.log(name, avatars, text);
 
     let myTweet = `<article class="tweet">
         <header>
           <div class="user">
-            <img src="${avatars}" alt="${name}'s avatar">
-            <h2 class="user-name">${name}</h2>
+            <img src="${escape(avatars)}" alt="${escape(name)}'s avatar">
+            <h2 class="user-name">${escape(name)}</h2>
           </div>
-          <h3 class="user-handle">${handle}</h3>
+          <h3 class="user-handle">${escape(handle)}</h3>
         </header>
-        <p>${text}</p>
+        <p>${escape(text)}</p>
         <footer>
-        <h5 class="publish-date">${time}</h5>
+        <h5 class="publish-date">${escape(time)}</h5>
         <ul>
           <li><i class="fas fa-flag"></i></li>
           <li><i class="fas fa-retweet"></i></li>
           <li><i class="fas fa-heart"></i></li>
-        </ul>
+      </ul>
       </footer>
       </article>`
 
     return myTweet;
   }
-
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
   // renderTweets(data);
   
   // $( "#target" ).submit(function( event ) {
@@ -81,7 +85,23 @@ $(function() {
         // alert("SENT!");
         let currentTweet = $("#tweet-text").serialize();
         
+        
+        let tweetLength = currentTweet.length - 5;
+        console.log(tweetLength);
+
+        if (tweetLength === 0) {
+          $( "#alert" ).slideDown("slow").html("Tweet can't be empty.");
+          return;
+          // alert("Tweet can't be empty.");
+        } else if (tweetLength > 140) {
+          $( "#alert" ).slideDown("slow").html("Your tweet exeeds 140 characters.");
+          return;
+
+        }
+
+
         $.post("/tweets",currentTweet,() => {
+          $( "#alert" ).slideUp("slow");
           loadTweets();
           console.log("Success");
         });
