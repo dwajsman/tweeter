@@ -12,6 +12,15 @@ body > header {
    align-self: flex-start;
 }
 
+@media (max-width: 600px) {
+  body>header {
+    margin-top: 0px;
+    padding-top: 50px;
+    height: 450px;
+  }
+
+}
+
 
 @media (max-width: 1024px) {
   body>header {

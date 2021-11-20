@@ -47,7 +47,6 @@ article h3 {
 article > footer {
   display: flex;
   border-top: 4px solid #555249;
-  /* padding: 10px; */
   justify-content: space-between;
   width: 100%;
 
@@ -84,8 +83,4 @@ article > header > div > img {
   margin-right: 15px;
   width: 100px;
   height: 100px;
-}
-
-article>header>div {
-
 }

@@ -27,6 +27,21 @@
      cursive;
  }
 
+  @media (max-width: 600px) {
+
+    nav {
+      position: fixed;
+    }
+
+     nav>div>a {
+       display: none;
+     }
+
+    nav>span {
+      /* padding-top: 0px; */
+    }
+
+  }
 
  @media (max-width: 1024px) {
 
