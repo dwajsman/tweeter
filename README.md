@@ -5,6 +5,10 @@ Tweeter is a simple, single-page Twitter clone.
 The project was built over a starter code found [here](lighthouse-labs/tweeter). My contributions were focused on developing my front-end back-end skills while working with HTML, CSS, JS, jQuery, AJAX, Node and Express.
 
 
+## Final Product
+
+!["screenshot of Home Page"](https://github.com/dwajsman/tweeter/blob/master/public/images/screens/Screenshot_2021-11-20__12_43_PM.jpg)
+
 ## Getting Started
 
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
