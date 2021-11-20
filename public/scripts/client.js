@@ -6,24 +6,23 @@
 
 
 
-$(function() {
-  // ---- NEW 
+$(function () {
+  // ---- NEW
 
   // Fake data taken from initial-tweets.json
-  const loadTweets = function() {
-    $.ajax({ type: "GET",   
-            url: "/tweets",   
-            async: false,
-            success : function(text)
-            {
-              renderTweets(text);
-            }
+  const loadTweets = function () {
+    $.ajax({
+      type: "GET",
+      url: "/tweets",
+      async: false,
+      success: function (text) {
+        renderTweets(text);
+      }
     });
-  };  
+  };
 
 
-
-  const renderTweets = function(tweets) {
+  const renderTweets = function (tweets) {
     // loops through tweets
     for (let index = 0; index < tweets.length; index++) {
       const tweetObj = tweets[index];
@@ -41,7 +40,6 @@ $(function() {
     let text = data["content"]["text"];
     let time = timeago.format(data["created_at"]);
 
-    //console.log(name, avatars, text);
 
     let myTweet = `<article class="tweet">
         <header>
@@ -64,62 +62,41 @@ $(function() {
 
     return myTweet;
   }
-  const escape = function(str) {
+  const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
-  // renderTweets(data);
-  
-  // $( "#target" ).submit(function( event ) {
-    //   alert( "Handler for .submit() called." );
-    //   event.preventDefault();
-    // });
-    
-    // $("#tweet-text").keyup(function (e) { 
-      //   console.log(e.target.value);
-      // });
-      
-      $("#form").submit(function(e) {
-        e.preventDefault();
-        // alert("SENT!");
-        let currentTweet = $("#tweet-text").serialize();
-        
-        
-        let tweetLength = currentTweet.length - 5;
-        console.log(tweetLength);
-
-        if (tweetLength === 0) {
-          $( "#alert" ).slideDown("slow").html("Tweet can't be empty.");
-          return;
-          // alert("Tweet can't be empty.");
-        } else if (tweetLength > 140) {
-          $( "#alert" ).slideDown("slow").html("Your tweet exeeds 140 characters.");
-          return;
-
-        }
 
 
-        $.post("/tweets",currentTweet,() => {
-          $( "#alert" ).slideUp("slow");
-          loadTweets();
-          console.log("Success");
-        });
-        // window.location.href = `/?${currentTweet}`;
-        
-        
-      });
-      
-      // button press code (not in use now)
-      
-      // $("button").on("click", function () {
-        //   // alert("hello!");
-        //   //  let myName = $tweet["user"]["name"];
-        //   // $(".tweet-posts").prepend(myName);
-        //   // console.log("button pressed!");
-        //   $("#tweet-posts").prepend($tweet);
-        // });
-        
-        
-        loadTweets();
-      });
+  $("#form").submit(function (e) {
+    e.preventDefault();
+    let currentTweet = $("#tweet-text").serialize();
+
+
+    let tweetLength = currentTweet.length - 5;
+    console.log(tweetLength);
+
+    if (tweetLength === 0) {
+      $("#alert").slideDown("slow").html("Tweet can't be empty.");
+      return;
+    } else if (tweetLength > 140) {
+      $("#alert").slideDown("slow").html("Your tweet exeeds 140 characters.");
+      return;
+
+    }
+
+
+    $.post("/tweets", currentTweet, () => {
+      $("#alert").slideUp("slow");
+      loadTweets();
+      console.log("Success");
+    });
+
+
+  });
+
+
+
+  loadTweets();
+});

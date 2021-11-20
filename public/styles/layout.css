@@ -6,7 +6,10 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -17,46 +20,40 @@ html {
 a {
   color: #fff;
   text-decoration: none;
-  /* no underline */
+
 }
 
 body {
-  
-  color: #545149;
 
+  color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  display:flex; 
-  /* flex-direction: column; */
+  display: flex;
 
-  
+
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- input:focus,
- select:focus,
- textarea:focus,
- button:focus {
-   outline: none;
- }
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
 
 body {
 
   font-family: 'Source Sans Pro',
     sans-serif;
-  /* background-color: pink; */
-  /* background-color: #D89820;
-  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png"); */
-
   display: flex;
-  align-items:flex-start;
+  align-items: flex-start;
   flex-wrap: wrap;
   justify-content: space-evenly;
 
- }
+}
 
 nav i {
   font-size: 18px;
