@@ -1,21 +1,22 @@
 main {
-  width: 90%;
+  width: 100%;
 
-  margin-top: 30px;
+  /* margin-top: 30px; */
   /* padding: 40px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding-bottom: 30px;
-  padding-top: 30px;
+  /* padding-top: 30px; */
   ;
 }
 
 .new-tweet {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  padding-top: 40px;
 }
 
 .new-tweet h2 {
@@ -90,4 +91,21 @@ output {
   color: red;
   font-weight: bolder;
   
+}
+
+
+@media (max-width: 1024px) {
+
+   main {
+     width: 90%;
+   }
+
+}
+
+@media (min-width: 1025px) {
+
+  main {
+    width: 50%;
+  }
+
 }

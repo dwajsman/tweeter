@@ -1,15 +1,39 @@
-header {
+body > header {
   height: 400px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: #D89820; */
-  /* background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png"); */
+  background-color: #D89820;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  padding-top: 30px;
 
   /* border: 6px solid red; */
-   margin-top: 150px;
+   margin-top: 80px;
+
+   align-self: flex-start;
 
 
 }
+
+
+@media (max-width: 1024px) {
+  body>header {
+    margin-top: 0px;
+  }
+ 
+
+}
+
+@media (min-width: 1025px) {
+
+body>header {
+  width: 25%;
+  padding-top: none;
+
+}
+
+
+}
+
